@@ -1,0 +1,74 @@
+/* Floating blog widget styles (separate file) */
+:root{
+    --fb-bg: rgba(20,20,20,0.75);
+    --fb-accent: #00ffee;
+    --fb-width: 320px;
+}
+.floating-blog{
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: var(--fb-width);
+    max-width: calc(100% - 48px);
+    z-index: 9999;
+    font-family: "Poppins", sans-serif;
+}
+.floating-blog .fb-inner{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(0,255,238,0.08);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    transform-origin: bottom right;
+    transition: transform 180ms ease, opacity 160ms ease;
+    opacity: 1;
+}
+.floating-blog .fb-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap: 8px;
+}
+.floating-blog h4{font-size:1.2rem;margin:0;color:var(--fb-accent)}
+.floating-blog .fb-view{font-size:0.9rem;color:#bdbdbd;text-decoration:none}
+.floating-blog .fb-list{list-style:none;margin:10px 0 0;padding:0;display:block}
+.floating-blog .fb-list li{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+.floating-blog .fb-list li a{color:#e6e6e6;text-decoration:none;font-size:0.95rem}
+.floating-blog .fb-list li a:hover{color:var(--fb-accent)}
+
+/* Toggle button */
+.floating-blog .fb-toggle{
+    position: absolute;
+    right: -64px;
+    bottom: 0;
+    transform: translateY(50%);
+    background: var(--fb-accent);
+    color: black;
+    border-radius: 999px;
+    padding: 10px 14px;
+    border: none;
+    cursor: pointer;
+    font-weight:700;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+/* Collapsed state on small screens */
+@media (max-width: 900px){
+    .floating-blog{
+        left: 50%;
+        right: auto;
+        bottom: 18px;
+        transform: translateX(-50%);
+        width: calc(100% - 36px);
+    }
+    .floating-blog .fb-toggle{right:12px;left:auto;transform:none}
+}
+
+/* Optional collapsed minimal state */
+.floating-blog.collapsed .fb-inner{height:0;padding:0;opacity:0;pointer-events:none;overflow:hidden}
+.floating-blog.collapsed .fb-toggle{right:-64px}
+
+/* Accessibility focus */
+.floating-blog a:focus, .floating-blog button:focus{outline:2px solid rgba(0,255,238,0.25);outline-offset:2px}

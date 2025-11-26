@@ -1,0 +1,39 @@
+/* Fixed blog panel styles - refined UI */
+:root{--fb-accent:#00ffee;--fb-bg:linear-gradient(180deg, rgba(8,8,8,0.9), rgba(18,18,18,0.9));--fb-width:360px}
+.fixed-blog-panel{position:fixed;right:30px;top:140px;width:var(--fb-width);max-width:calc(100% - 60px);z-index:9998}
+.fixed-blog-panel .panel-inner{background:var(--fb-bg);border-radius:14px;padding:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 24px 60px rgba(0,0,0,0.6);overflow:hidden}
+.fixed-blog-panel .panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.fixed-blog-panel h3{color:var(--fb-accent);font-size:1.05rem;margin:0;font-weight:700}
+.panel-actions{display:flex;align-items:center;gap:10px}
+.panel-all{color:#cfdcdc;font-size:0.85rem;text-decoration:none}
+.panel-minimize{background:transparent;border:1px solid rgba(255,255,255,0.04);color:#dfeff0;padding:6px 8px;border-radius:8px;cursor:pointer;transition:transform .18s ease,background .18s ease}
+.panel-minimize:hover{transform:translateY(-2px);background:rgba(255,255,255,0.02)}
+.panel-list{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.panel-item{overflow:hidden;border-radius:10px}
+.item-link{display:flex;gap:12px;align-items:center;padding:10px;border-radius:10px;text-decoration:none;color:inherit;transition:transform .22s cubic-bezier(.2,.9,.2,1),box-shadow .22s ease,background .22s ease}
+.item-link:hover{transform:translateY(-8px);background:linear-gradient(90deg, rgba(0,255,238,0.03), rgba(75,179,255,0.02));box-shadow:0 18px 48px rgba(0,178,255,0.06)}
+.item-thumb{width:68px;height:54px;border-radius:8px;flex:0 0 68px;background:linear-gradient(135deg,var(--fb-accent),#4bb3ff);box-shadow:inset 0 -6px 16px rgba(0,0,0,0.25)}
+.item-body strong{display:block;font-size:0.96rem;color:#eafefe}
+.item-excerpt{display:block;font-size:0.82rem;color:#bfcfcf;margin-top:6px}
+
+/* hover effect on thumb */
+.item-link:hover .item-thumb{transform:scale(1.04);filter:brightness(1.03)}
+
+@media(max-width:1100px){.fixed-blog-panel{right:18px;top:100px;width:320px}}
+@media(max-width:800px){.fixed-blog-panel{position:static;width:100%;max-width:none;margin:1rem 0}}
+
+/* entrance animation */
+.fixed-blog-panel{opacity:0;transform:translateY(10px);animation:panelIn .55s ease forwards .2s}
+@keyframes panelIn{to{opacity:1;transform:none}}
+
+/* Collapsed/minimized state: show compact pill */
+.fixed-blog-panel.collapsed{width:120px;right:18px}
+.fixed-blog-panel.collapsed .panel-inner{padding:8px}
+.fixed-blog-panel.collapsed .panel-list{display:none}
+.fixed-blog-panel.collapsed .panel-header h3{font-size:0.9rem}
+.fixed-blog-panel.collapsed .panel-all{display:none}
+.fixed-blog-panel.collapsed .panel-minimize{transform:rotate(180deg)}
+.fixed-blog-panel.collapsed .item-thumb{display:none}
+.fixed-blog-panel.collapsed .item-excerpt{display:none}
+.fixed-blog-panel.collapsed .item-body strong{font-size:0.9rem}
+
