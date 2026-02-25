@@ -20,8 +20,9 @@
         <nav class="navbar">
             <a href="#home" class="active">About me</a>
             <a href="fouzansresume.pdf" target="blank" rel="noopener noreferrer">Resume</a>
-            <a href="#education">Education</a>
             <a href="#startups">Startups</a>
+            <a href="#projects">Projects</a>
+            <a href="#articles">Articles</a>
             <a href="blog.html">Blog</a>
             <!-- Contact removed -->
         </nav>
@@ -50,38 +51,160 @@
 
     </section>
 
-<section class="education" id="education">
-    <h2 class="heading">Education</h2>
+<section class="projects" id="projects">
+    <h2 class="heading">Projects</h2>
+    
+    <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+        <button class="filter-btn" data-filter="learning">Learning</button>
+    </div>
 
-    <div class="timeline-items">
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-                <div class="timeline-date">2020</div>
-                <div class="timeline-content reveal-on-scroll" data-reveal-delay="200">
-                    <h3>High School</h3>
-                    <p>I completed my high school education at MS Junior College, specializing in Mathematics, Economics, and Commerce, building a strong foundation in analytical and business concepts.</p>
+    <div class="projects-container">
+        <!-- Polymath Academy -->
+        <div class="project-card reveal-on-scroll" data-reveal-delay="100" data-category="web,learning">
+            <div class="project-content">
+                <h3>Polymath Academy</h3>
+                <p>An AI-powered learning platform with interactive curriculums in Mathematics, Science, and Memory techniques. Features a cutting-edge LMS for seamless learning experiences.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">AI</span>
                 </div>
+                <div class="project-category">Web • Learning</div>
             </div>
-        
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-                <div class="timeline-date">2023</div>
-                <div class="timeline-content reveal-on-scroll" data-reveal-delay="300">
-                    <h3>Bachelor’s</h3>
-                    <p>I earned my Bachelor’s in Business Administration from Malla Reddy University, specializing in Business Analytics and Finance, where I developed strong analytical and financial decision-making skills.</p>
-                </div>
-            
+            <a href="https://github.com/fouzanahmed-tech/Polymath2" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>Code</span>
+                <i class='bx bxl-github'></i>
+            </a>
         </div>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-                <div class="timeline-date">2026</div>
-                <div class="timeline-content reveal-on-scroll" data-reveal-delay="400">
-                    <h3>Master's</h3>
-                    <p>Pursuing my Master’s in Business Analytics at Lewis University, focusing on data-driven decision-making, analytics, and technology-driven business solutions.</p>
-                </div>  
+        <!-- International Students Platform -->
+        <div class="project-card reveal-on-scroll" data-reveal-delay="150" data-category="web">
+            <div class="project-content">
+                <h3>International Students Platform</h3>
+                <p>A community-driven platform helping international students access resources, connect with peers, and navigate their journey. Features AI-powered assistance for visas, jobs, and housing.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">AI</span>
+                </div>
+                <div class="project-category">Web</div>
+            </div>
+            <a href="https://github.com/fouzanahmed-tech/International_Students" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>Code</span>
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+
+        <!-- CRUD Todo List -->
+        <div class="project-card reveal-on-scroll" data-reveal-delay="200" data-category="web">
+            <div class="project-content">
+                <h3>CRUD Todo List</h3>
+                <p>A full-stack todo application with MongoDB backend and React frontend. Demonstrates complete CRUD operations with Express server integration.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Express</span>
+                </div>
+                <div class="project-category">Web</div>
+            </div>
+            <a href="https://github.com/fouzanahmed-tech/CRUD-todolist" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>Code</span>
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+
+        <!-- AI Agent Research Tool -->
+        <div class="project-card reveal-on-scroll" data-reveal-delay="250" data-category="ai-ml">
+            <div class="project-content">
+                <h3>AI Agent Research Tool</h3>
+                <p>Building my first AI agent using LangChain and Claude Anthropic. Integrates web search, Wikipedia queries, and file storage for research automation.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">AI</span>
+                </div>
+                <div class="project-category">AI/ML</div>
+            </div>
+            <a href="https://github.com/fouzanahmed-tech/AI-agent-first" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>Code</span>
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+
+        <!-- Portfolio Website -->
+        <div class="project-card reveal-on-scroll" data-reveal-delay="350" data-category="web">
+            <div class="project-content">
+                <h3>Portfolio Website</h3>
+                <p>Personal portfolio site showcasing projects, education, and professional journey. Built with modern web technologies and responsive design principles.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-category">Web</div>
+            </div>
+            <a href="https://github.com/fouzanahmed-tech/fouzan-portfolio" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>Code</span>
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+
+        <!-- Blinkit Analysis -->
+        <div class="project-card reveal-on-scroll" data-reveal-delay="400" data-category="data">
+            <div class="project-content">
+                <h3>Blinkit Analysis</h3>
+                <p>Comprehensive business intelligence project analyzing Blinkit's sales performance, customer satisfaction, and inventory distribution using key KPIs and interactive visualizations.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">Excel</span>
+                    <span class="tech-tag">Analytics</span>
+                </div>
+                <div class="project-category">Data</div>
+            </div>
+            <a href="https://github.com/fouzanahmed-tech/Blinkit-Analysis" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>Code</span>
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+
+        <!-- California Housing Price Prediction -->
+        <div class="project-card reveal-on-scroll" data-reveal-delay="450" data-category="ai-ml,data">
+            <div class="project-content">
+                <h3>California Housing Price Prediction</h3>
+                <p>Machine learning project using Multiple Linear Regression to predict California housing prices. Explores key factors affecting house prices for better decision-making.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">Pandas</span>
+                </div>
+                <div class="project-category">AI/ML • Data</div>
+            </div>
+            <a href="https://github.com/fouzanahmed-tech/Predicting-California-Housing-Prices-using-Multiple-Linear-Regression" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>Code</span>
+                <i class='bx bxl-github'></i>
+            </a>
+        </div>
+
+        <!-- Orange Project -->
+        <div class="project-card reveal-on-scroll" data-reveal-delay="500" data-category="data">
+            <div class="project-content">
+                <h3>Orange Project</h3>
+                <p>Data analysis project exploring which countries have the highest number of valued companies. Insights into global economic patterns and business distribution.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Data Analysis</span>
+                    <span class="tech-tag">Visualization</span>
+                </div>
+                <div class="project-category">Data</div>
+            </div>
+            <a href="https://github.com/fouzanahmed-tech/orange-project" target="_blank" rel="noopener noreferrer" class="project-link">
+                <span>Code</span>
+                <i class='bx bxl-github'></i>
+            </a>
         </div>
     </div>
 </section>
@@ -89,25 +212,75 @@
 <section class="startups" id="startups">
     <h2 class="heading">Startups</h2>
 
-
     <div class="startups-container">
-        <a href="https://polymathacademy.in/" target="_blank" rel="noopener noreferrer"> 
-        <div class="startups-box reveal-on-scroll" data-reveal-delay="200">
-            <div class="startups-info">
-                <h4>Polymath Academy</h4>
-                <p>An AI-powered learning platform designed to make education interactive, personalized, and engaging. It offers innovative curriculums in Mathematics, Science, and Memory techniques, helping students master complex subjects efficiently. With a cutting-edge LMS, we provide seamless, student-centric learning experiences across multiple regions.</p>
+        <a href="https://polymathacademy.in/" target="_blank" rel="noopener noreferrer" class="startup-link">
+            <div class="startup-card reveal-on-scroll" data-reveal-delay="100">
+                <div class="startup-icon">
+                    <i class='bx bxs-graduation'></i>
+                </div>
+                <div class="startup-content">
+                    <h3>Polymath Academy</h3>
+                    <p>AI-powered learning platform with personalized curriculums in Mathematics, Science, and Memory techniques.</p>
+                </div>
+                <div class="startup-arrow">
+                    <i class='bx bx-chevron-right'></i>
+                </div>
             </div>
-        </div>
         </a>
 
-        <a href="https://internationalstudentss.com/" target="_blank" rel="noopener noreferrer">
-        <div class="startups-box reveal-on-scroll" data-reveal-delay="300">
-            <div class="startups-info">
-                <h4>International Students</h4>
-                <p>A community-driven platform built to help international students access essential resources, connect with peers, and navigate their journey with ease. It features an AI-powered assistant that provides instant guidance on visas, jobs, housing, and cultural adaptation.</p>
+        <a href="https://internationalstudentss.com/" target="_blank" rel="noopener noreferrer" class="startup-link">
+            <div class="startup-card reveal-on-scroll" data-reveal-delay="150">
+                <div class="startup-icon" aria-label="International Students">
+                    <i class='bx bxs-user' title="Student"></i>
+                </div>
+                <div class="startup-content">
+                    <h3>International Students</h3>
+                    <p>Community platform helping international students with resources, peer connections, and AI-powered guidance.</p>
+                </div>
+                <div class="startup-arrow">
+                    <i class='bx bx-chevron-right'></i>
+                </div>
             </div>
-        </div>    
-</a>
+        </a>
+    </div>
+</section>
+
+<section class="articles" id="articles">
+    <h2 class="heading">Articles</h2>
+    <p class="articles-subtitle">Insights on Technology, Business, and Innovation</p>
+    
+    <div class="articles-container">
+        <article class="article-card reveal-on-scroll" data-reveal-delay="100">
+            <div class="article-header">
+                <h3>Do We Really Choose? — Free Will</h3>
+                <span class="article-date">Recent</span>
+            </div>
+            <p class="article-excerpt">Free will, qadar, and responsibility: an overview. Exploring the philosophical intersection of destiny and choice.</p>
+            <a href="blog.html" class="article-link">Read More →</a>
+        </article>
+
+        <article class="article-card reveal-on-scroll" data-reveal-delay="150">
+            <div class="article-header">
+                <h3>The Question of Ideas — Summary</h3>
+                <span class="article-date">Recent</span>
+            </div>
+            <p class="article-excerpt">A concise look at ideas that shape civilizations. Understanding the power of thought and its impact on society.</p>
+            <a href="blog.html" class="article-link">Read More →</a>
+        </article>
+
+        <article class="article-card reveal-on-scroll" data-reveal-delay="200">
+            <div class="article-header">
+                <h3>Pakistani Dramas — What Desi Families Should Know</h3>
+                <span class="article-date">Recent</span>
+            </div>
+            <p class="article-excerpt">Cultural critique and healthier storytelling suggestions. Analysis of narrative patterns and their societal influence.</p>
+            <a href="blog.html" class="article-link">Read More →</a>
+        </article>
+    </div>
+
+    <div class="articles-cta">
+        <a href="blog.html" class="btn">View All Articles</a>
+    </div>
 </section>
 
 <!-- Contact section removed -->
@@ -153,7 +326,7 @@
         <ul class="panel-list">
             <li class="panel-item">
                 <a href="blog.html#" class="item-link">
-                    <div class="item-thumb" aria-hidden="true"></div>
+                    <div class="item-thumb" aria-hidden="true"><i class="bx bx-book" title="Article"></i></div>
                     <div class="item-body">
                         <strong>Do We Really Choose? — Free Will</strong>
                         <span class="item-excerpt">Free will, qadar, and responsibility: an overview.</span>
@@ -162,7 +335,7 @@
             </li>
             <li class="panel-item">
                 <a href="blog.html#" class="item-link">
-                    <div class="item-thumb" aria-hidden="true"></div>
+                    <div class="item-thumb" aria-hidden="true"><i class="bx bx-book" title="Article"></i></div>
                     <div class="item-body">
                         <strong>The Question of Ideas — Summary</strong>
                         <span class="item-excerpt">A concise look at ideas that shape civilizations.</span>
@@ -171,7 +344,7 @@
             </li>
             <li class="panel-item">
                 <a href="blog.html#" class="item-link">
-                    <div class="item-thumb" aria-hidden="true"></div>
+                    <div class="item-thumb" aria-hidden="true"><i class="bx bx-book" title="Article"></i></div>
                     <div class="item-body">
                         <strong>Pakistani Dramas — What Desi Families Should Know</strong>
                         <span class="item-excerpt">Cultural critique and healthier storytelling suggestions.</span>
@@ -185,3 +358,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

@@ -53,6 +53,42 @@ document.addEventListener("DOMContentLoaded", () => {
         revealElements.forEach((el) => observer.observe(el));
     }
 
+    // Projects Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    if(filterBtns.length && projectCards.length){
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Filter projects
+                projectCards.forEach(card => {
+                    const categories = card.getAttribute('data-category').split(',');
+                    
+                    if(filterValue === 'all' || categories.includes(filterValue)){
+                        card.style.display = 'flex';
+                        // Trigger animation
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+
     // Panel minimize / restore handling (fixed blog panel)
     const blogPanel = document.querySelector('.fixed-blog-panel');
     if(blogPanel){
